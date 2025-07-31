@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <style>
-        /* CSS COMPLETO INSERIDO DIRETAMENTE AQUI */
+        /* SEU CSS PERMANECE IGUAL - Nenhuma alteração aqui */
         :root {
             --cor-principal: #6B1D28;
             --cor-destaque: #EAB83E;
@@ -133,10 +133,9 @@
         <section id="entrevista">
             <div class="container">
                 <h2 data-aos="fade-up">Preencha com Verdade</h2>
-                <form id="interview-form" action="https://formspree.io/f/mdkddzdo" method="POST" data-aos="fade-up" data-aos-delay="200">
+                
+                <form id="interview-form" data-aos="fade-up" data-aos-delay="200">
                     
-                    <input type="hidden" name="_next" value="URL_DA_SUA_PAGINA_DE_AGRADECIMENTO_SE_TIVER_UMA">
-
                     <div class="form-group">
                         <label for="nome">Nome Completo:</label>
                         <input type="text" id="nome" name="nome_completo" required placeholder="Seu nome completo">
@@ -210,7 +209,7 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // JAVASCRIPT COMPLETO INSERIDO DIRETAMENTE AQUI
+        // MUDANÇA 2: LÓGICA JAVASCRIPT COMPLETAMENTE ATUALIZADA
         document.addEventListener('DOMContentLoaded', function() {
             try {
                 AOS.init({
@@ -228,7 +227,7 @@
 
             if (form) {
                 form.addEventListener('submit', function(event) {
-                    event.preventDefault();
+                    event.preventDefault(); // Impede o envio padrão do formulário
 
                     errorMessageContainer.style.display = 'none';
                     errorMessageContainer.innerHTML = '';
@@ -238,6 +237,7 @@
                     const photoLinkInput = document.getElementById('link_foto');
                     let errors = [];
 
+                    // --- Validação (mantida como estava) ---
                     if (!instagramInput.value.startsWith('@') || instagramInput.value.length < 3) {
                         errors.push('O Instagram deve começar com "@" e ter um nome de usuário.');
                     }
@@ -254,7 +254,7 @@
                     }
                     
                     if (document.getElementById('nome').value.trim() === '' || document.getElementById('idade').value.trim() === '' || document.getElementById('tempo_caminhada').value === '') {
-                         errors.push('Por favor, preencha todos os campos obrigatórios.');
+                        errors.push('Por favor, preencha todos os campos obrigatórios.');
                     }
 
                     if (errors.length > 0) {
@@ -262,9 +262,58 @@
                         errorMessageContainer.style.display = 'block';
                         errorMessageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     } else {
+                        // --- LÓGICA DE ENVIO PARA WHATSAPP ---
                         submitButton.classList.add('btn--loading');
                         submitButton.disabled = true;
-                        form.submit();
+
+                        // 1. Defina o número de telefone para o qual a mensagem será enviada (apenas números)
+                        const phoneNumber = "558399586325";
+
+                        // 2. Colete os dados dos campos do formulário
+                        const nome = document.getElementById('nome').value;
+                        const idade = document.getElementById('idade').value;
+                        const cidadeEstado = document.getElementById('cidade_estado').value;
+                        const sexo = document.querySelector('input[name="sexo"]:checked').value;
+                        const igreja = document.getElementById('igreja').value;
+                        const tempoCaminhada = document.getElementById('tempo_caminhada').value;
+                        const motivacao = document.getElementById('motivacao').value;
+                        const instagram = document.getElementById('instagram').value;
+                        const whatsappUser = document.getElementById('whatsapp').value;
+                        const linkFoto = document.getElementById('link_foto').value;
+
+                        // 3. Monte a mensagem formatada para o WhatsApp
+                        // Usamos *texto* para negrito e %0A para quebras de linha na URL
+                        const mensagemFormatada = `
+*Nova Entrevista - Crentes Namorando*
+
+*Nome:* ${nome}
+*Idade:* ${idade}
+*Cidade/Estado:* ${cidadeEstado}
+*Sexo:* ${sexo}
+*WhatsApp:* ${whatsappUser}
+*Instagram:* ${instagram}
+
+*Igreja (membro ativo):* ${igreja}
+*Tempo de caminhada com Cristo:* ${tempoCaminhada}
+*Motivação para relacionamento:* ${motivacao}
+
+*Link da Foto:* ${linkFoto}
+                        `.trim();
+
+                        // 4. Codifique a mensagem para ser usada em uma URL
+                        const mensagemCodificada = encodeURIComponent(mensagemFormatada);
+
+                        // 5. Crie o link final do WhatsApp
+                        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${mensagemCodificada}`;
+
+                        // 6. Redirecione o usuário para o WhatsApp
+                        window.location.href = whatsappUrl;
+
+                        // Reativa o botão caso o usuário volte para a página
+                        setTimeout(() => {
+                           submitButton.classList.remove('btn--loading');
+                           submitButton.disabled = false;
+                        }, 2000); 
                     }
                 });
             }
