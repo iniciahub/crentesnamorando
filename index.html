@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crentes Namorando - Comunidade Exclusiva para Relacionamentos com Propósito</title>
+    <title>Crentes Namorando - Comunidade Exclusiva com Propósito</title>
     <meta name="description" content="Comunidade exclusiva para solteiros cristãos sérios que buscam um relacionamento com propósito e aliança, centrado em Deus.">
 
     <meta property="og:title" content="Crentes Namorando - Comunidade Exclusiva">
     <meta property="og:description" content="Para solteiros cristãos que buscam um relacionamento com propósito e aliança, centrado em Deus.">
     <meta property="og:image" content="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753927069/20250730_2152_Logotipo_Rom%C3%A2ntico_Crist%C3%A3o_remix_01k1ezat83f1asnk5qyqxret5m_bsnp8v.png">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dwu4r8y1a/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1753927069/20250730_2152_Logotipo_Rom%C3%A2ntico_Crist%C3%A3o_remix_01k1ezat83f1asnk5qyqxret5m_bsnp8v.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <style>
-        /* CSS COMPLETO INSERIDO DIRETAMENTE AQUI */
+        /* CSS COMPLETO E ATUALIZADO */
         :root {
             --cor-principal: #6B1D28;
             --cor-destaque: #EAB83E;
@@ -34,68 +31,117 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.7; color: var(--cor-texto-claro); background-color: var(--cor-background-claro); overflow-x: hidden; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.7; color: var(--cor-texto-claro); background-color: var(--cor-background-claro); overflow-x: hidden; padding-top: 80px; /* Espaço para o menu fixo */ }
         .container { max-width: 1000px; margin: 0 auto; padding: 0 25px; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--cor-principal); text-align: center; margin-bottom: 25px; font-weight: 700; }
         h1 { font-size: 3.8em; color: var(--cor-destaque); line-height: 1.1; margin-bottom: 20px; }
         h2 { font-size: 2.8em; margin-top: 20px; }
         p { margin-bottom: 18px; font-size: 1.05em; line-height: 1.8; }
-        .btn { display: inline-block; background-color: var(--cor-principal); color: var(--cor-branco); padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1em; transition: background-color 0.3s ease, transform 0.2s ease; margin-top: 30px; border: none; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .btn:hover { background-color: #5a181f; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
-        .btn-secondary { background-color: var(--cor-destaque); color: var(--cor-principal); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
-        .btn-secondary:hover { background-color: #d1a535; color: var(--cor-principal); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
         section { padding: 80px 0; text-align: center; position: relative; }
         main > section:nth-of-type(odd) { background-color: var(--cor-branco); }
         main > section:nth-of-type(even) { background-color: var(--cor-background-claro); }
-        #hero { background-color: var(--cor-background-claro); color: var(--cor-principal); padding: 100px 0 80px; text-align: center; }
-        #hero .logo { margin-bottom: 30px; max-width: 280px; height: auto; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); }
-        #hero h1 { color: var(--cor-principal); }
-        #hero h2 { color: var(--cor-texto-claro); font-size: 2.2em; font-weight: 500; margin-top: 0; max-width: 800px; margin-left: auto; margin-right: auto; }
-        #porque-existe p { max-width: 750px; margin-left: auto; margin-right: auto; font-size: 1.15em; }
-        #porque-existe p strong { color: var(--cor-principal); }
-        #como-funciona .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 35px; margin-top: 40px; }
-        #como-funciona .grid-item { background-color: var(--cor-background-claro); padding: 35px; border-radius: 12px; box-shadow: 0 6px 20px var(--cor-sombra); text-align: center; border-bottom: 6px solid var(--cor-destaque); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        #como-funciona .grid-item:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-        #como-funciona .grid-item .icon { font-size: 3.5em; color: var(--cor-destaque); margin-bottom: 15px; }
-        #como-funciona .grid-item h3 { font-family: 'Montserrat', sans-serif; font-size: 1.4em; margin-top: 10px; color: var(--cor-principal); font-weight: 600; }
-        #como-funciona .grid-item p { font-size: 0.98em; line-height: 1.6; margin-bottom: 0; }
+
+        /* --- Menu de Navegação --- */
+        .main-nav { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--cor-branco); z-index: 1000; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .main-nav .container { display: flex; justify-content: space-between; align-items: center; padding: 10px 25px; }
+        .main-nav .logo-nav { max-height: 60px; }
+        .main-nav ul { list-style: none; display: flex; gap: 30px; }
+        .main-nav a { text-decoration: none; color: var(--cor-principal); font-weight: 600; font-size: 1em; padding: 10px; transition: color 0.3s; }
+        .main-nav a:hover, .main-nav .nav-cta:hover { color: var(--cor-destaque); }
+        .main-nav .nav-cta { background-color: var(--cor-destaque); color: var(--cor-principal); border-radius: 50px; padding: 10px 20px; transition: all 0.3s ease; }
+
+        /* --- Botões --- */
+        .btn { display: inline-block; background-color: var(--cor-principal); color: var(--cor-branco); padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1em; transition: all 0.3s ease; margin-top: 30px; border: none; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn:hover { background-color: #5a181f; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+        .btn-secondary { background-color: var(--cor-destaque); color: var(--cor-principal); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+        .btn-secondary:hover { background-color: #d1a535; }
         
-        /* NOVA SEÇÃO: TESTEMUNHOS */
-        #testemunhos { background-color: var(--cor-background-claro); }
+        /* --- Seções Anteriores --- */
+        #hero { padding: 40px 0 80px; }
+        #hero .logo { margin-bottom: 30px; max-width: 240px; }
+        #hero h2 { font-size: 2em; }
+        #porque-existe p, #como-funciona p { max-width: 750px; margin-left: auto; margin-right: auto; }
+        #como-funciona .grid-item { background-color: var(--cor-branco); }
+
+        /* --- Testemunhos --- */
         .testemunho-card { display: flex; flex-direction: column; align-items: center; background: var(--cor-branco); border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); padding: 40px; max-width: 700px; margin: 40px auto; border-left: 8px solid var(--cor-principal); }
         .testemunho-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 5px solid var(--cor-destaque); margin-bottom: 20px; }
         .testemunho-card blockquote { font-family: 'Playfair Display', serif; font-size: 1.4em; color: var(--cor-texto-escuro); line-height: 1.6; font-style: italic; margin-bottom: 15px; border-left: 3px solid var(--cor-destaque); padding-left: 20px; }
         .testemunho-card .autor { font-weight: 700; font-size: 1.1em; color: var(--cor-principal); }
         
-        #entrevista { background-color: var(--cor-principal); color: var(--cor-branco); }
+        /* --- Seção de Recursos --- */
+        #recursos .recursos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .recurso-card { background-color: var(--cor-branco); border-radius: 15px; box-shadow: 0 6px 20px var(--cor-sombra); overflow: hidden; text-align: left; transition: all 0.3s ease; }
+        .recurso-card:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .recurso-card .recurso-icon { font-size: 2.5em; color: var(--cor-destaque); padding: 25px 30px 0; }
+        .recurso-card h3 { text-align: left; padding: 10px 30px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.3em; }
+        .recurso-card p { padding: 0 30px; font-size: 0.95em; }
+        .recurso-card a { display: block; background-color: var(--cor-principal); color: var(--cor-branco); padding: 15px 30px; text-decoration: none; font-weight: 600; text-align: center; transition: background-color 0.3s; }
+        .recurso-card a:hover { background-color: #5a181f; }
+
+        /* --- Seção de FAQ --- */
+        .faq-container { max-width: 800px; margin: 40px auto; text-align: left; }
+        .faq-item { background: var(--cor-branco); margin-bottom: 10px; border-radius: 10px; box-shadow: 0 4px 15px var(--cor-sombra); }
+        .faq-item summary { font-size: 1.1em; font-weight: 600; color: var(--cor-principal); padding: 20px; cursor: pointer; list-style: none; position: relative; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: 20px; transition: transform 0.3s ease; }
+        .faq-item[open] summary::after { transform: rotate(180deg); }
+        .faq-item .faq-content { padding: 0 20px 20px; }
+
+        /* --- Formulário Multi-Etapas --- */
+        #entrevista { background-color: var(--cor-principal); }
         #entrevista h2 { color: var(--cor-destaque); }
-        #entrevista form { background-color: var(--cor-branco); padding: 50px; border-radius: 15px; max-width: 800px; margin: 0 auto; box-shadow: 0 8px 25px rgba(0,0,0,0.3); text-align: left; }
-        #entrevista .form-group { margin-bottom: 25px; }
-        #entrevista label { display: block; margin-bottom: 10px; font-weight: 600; color: var(--cor-principal); font-size: 1.05em; }
-        #entrevista input, #entrevista textarea, #entrevista select { width: 100%; padding: 14px 15px; border: 1px solid var(--cor-borda-input); border-radius: 8px; font-size: 1em; color: var(--cor-texto-escuro); background-color: var(--cor-background-claro); transition: border-color 0.3s ease, box-shadow 0.3s ease; }
-        #entrevista input:focus, #entrevista textarea:focus, #entrevista select:focus { border-color: var(--cor-destaque); box-shadow: 0 0 0 3px rgba(234, 184, 62, 0.3); outline: none; }
-        #entrevista textarea { resize: vertical; min-height: 100px; }
-        #entrevista .radio-group { display: flex; gap: 25px; flex-wrap: wrap; }
-        #entrevista .radio-group label { display: flex; align-items: center; font-weight: 400; color: var(--cor-texto-claro); cursor: pointer; }
-        #entrevista .radio-group input { width: auto; margin-right: 8px; transform: scale(1.1); accent-color: var(--cor-destaque); }
-        #entrevista .disclaimer { background-color: rgba(234, 184, 62, 0.15); color: var(--cor-principal); padding: 25px; border-radius: 10px; margin-top: 40px; font-weight: 500; text-align: center; font-size: 1.1em; line-height: 1.5; border: 1px solid var(--cor-destaque); }
-        #entrevista .disclaimer p { margin-bottom: 0; color: var(--cor-principal); }
-        .form-message-error { color: #c0392b; background-color: #fdd; border: 1px solid #c0392b; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; font-weight: 500; display: none; }
-        .btn-spinner { display: none; width: 20px; height: 20px; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top-color: var(--cor-principal); animation: spin 1s ease-in-out infinite; }
-        .btn.btn-secondary .btn-spinner { border-top-color: var(--cor-principal); }
-        .btn.btn--loading .btn-spinner { display: block; }
-        .btn.btn--loading .btn-text { display: none; }
-        .btn.btn--loading { cursor: not-allowed; display: flex; align-items: center; justify-content: center; }
-        @keyframes spin { to { transform: rotate(360deg); } }
+        #msform { background-color: var(--cor-branco); padding: 40px 50px; border-radius: 15px; max-width: 800px; margin: 0 auto; box-shadow: 0 8px 25px rgba(0,0,0,0.3); text-align: left; }
+        .form-step { display: none; }
+        .form-step.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+        #progressbar { margin-bottom: 30px; overflow: hidden; counter-reset: step; display: flex; justify-content: space-between; }
+        #progressbar li { list-style-type: none; color: var(--cor-texto-claro); text-transform: uppercase; font-size: 0.8em; width: 33.33%; text-align: center; position: relative; }
+        #progressbar li:before { content: counter(step); counter-increment: step; width: 40px; height: 40px; line-height: 40px; display: block; font-size: 1.2em; color: var(--cor-principal); background: var(--cor-borda-input); border-radius: 50%; margin: 0 auto 10px auto; }
+        #progressbar li:after { content: ''; width: 100%; height: 2px; background: var(--cor-borda-input); position: absolute; left: -50%; top: 19px; z-index: -1; }
+        #progressbar li:first-child:after { content: none; }
+        #progressbar li.active:before, #progressbar li.active:after { background: var(--cor-destaque); color: var(--cor-principal); }
+        .form-navigation { display: flex; justify-content: space-between; margin-top: 30px; }
+        .form-navigation .btn { margin-top: 0; }
+        
+        /* --- Footer --- */
         footer { background-color: var(--cor-texto-escuro); color: rgba(255, 255, 255, 0.8); text-align: center; padding: 40px 0; font-size: 0.9em; }
         .social-icons { margin-top: 15px; }
         .social-icons a { color: var(--cor-branco); font-size: 1.8em; margin: 0 15px; transition: color 0.3s ease; }
         .social-icons a:hover { color: var(--cor-destaque); }
-        @media (max-width: 900px) { h1 { font-size: 3.2em; } h2 { font-size: 2.2em; } .btn { padding: 15px 30px; font-size: 1em; } #hero .logo { max-width: 240px; } #hero h2 { font-size: 1.8em; } #como-funciona .grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; } }
-        @media (max-width: 600px) { h1 { font-size: 2.5em; } h2 { font-size: 1.8em; } p { font-size: 1em; } section { padding: 60px 0; } #hero { padding: 80px 0 60px; } #hero .logo { max-width: 200px; } #hero h2 { font-size: 1.5em; } #entrevista form { padding: 30px 20px; } .testemunho-card { padding: 30px 20px; } .testemunho-card blockquote { font-size: 1.2em; } }
+
+        /* --- Outros Estilos --- */
+        .form-message-error { color: #c0392b; background-color: #fdd; border: 1px solid #c0392b; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; font-weight: 500; display: none; }
+        .spinner { display: none; width: 20px; height: 20px; border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top-color: var(--cor-principal); animation: spin 1s ease-in-out infinite; }
+        .btn.loading .spinner { display: block; }
+        .btn.loading span { display: none; }
+        .btn.loading { display: inline-flex; align-items: center; justify-content: center; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            body { padding-top: 0; }
+            .main-nav { position: relative; }
+            .main-nav ul { display: none; } /* Esconde menu em telas menores por simplicidade */
+            #hero { padding-top: 60px; }
+            h1 { font-size: 2.8em; } h2 { font-size: 1.8em; }
+        }
     </style>
 </head>
 <body>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a href="#hero"><img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/c_pad,w_200,b_auto:predominant,fl_preserve_transparency/v1753927069/20250730_2152_Logotipo_Rom%C3%A2ntico_Crist%C3%A3o_remix_01k1ezat83f1asnk5qyqxret5m_bsnp8v.png" alt="Logo Crentes Namorando" class="logo-nav"></a>
+            <ul>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#testemunhos">Testemunhos</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#entrevista" class="nav-cta">Inscreva-se</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header id="hero">
         <div class="container">
@@ -110,118 +156,111 @@
         <section id="porque-existe">
             <div class="container" data-aos="fade-up">
                 <h2>Por que essa comunidade existe?</h2>
-                <p>Porque crente não namora por namorar. Namora para <strong>edificar</strong>, para <strong>casar</strong>.</p>
-                <p>Porque <strong>orar junto</strong> é o alicerce, e o beijo é a consequência.</p>
-                <p>Porque <strong>caráter e temor a Deus</strong> superam qualquer beleza superficial.</p>
-                <p>E porque o <strong>centro aqui é Cristo</strong>, não a carência ou a solidão. Nosso propósito é glorificar a Ele em cada passo do relacionamento.</p>
+                <p>Porque crente não namora por namorar. Namora para <strong>edificar</strong>, para <strong>casar</strong>. Porque <strong>orar junto</strong> é o alicerce, e o beijo é a consequência. Porque <strong>caráter e temor a Deus</strong> superam qualquer beleza superficial. E porque o <strong>centro aqui é Cristo</strong>, não a carência ou a solidão.</p>
             </div>
         </section>
 
         <section id="como-funciona">
-            <div class="container">
-                <h2 data-aos="fade-up">Como Funciona</h2>
+            <div class="container" data-aos="fade-up">
+                <h2>Como Funciona</h2>
                 <div class="grid">
-                    <div class="grid-item" data-aos="fade-up" data-aos-delay="100">
-                        <i class="fas fa-search icon" aria-hidden="true"></i> <h3>Sua Entrevista</h3>
-                        <p>Preencha nosso formulário com sinceridade e detalhes sobre sua fé e seus objetivos.</p>
                     </div>
-                    <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-brain icon" aria-hidden="true"></i> <h3>Análise de Perfil</h3>
-                        <p>Avaliamos cuidadosamente suas respostas para garantir alinhamento com os valores da comunidade.</p>
-                    </div>
-                    <div class="grid-item" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-handshake icon" aria-hidden="true"></i> <h3>Acesso Exclusivo</h3>
-                        <p>Após aprovação, você recebe o convite para nossa comunidade privada no Telegram ou WhatsApp.</p>
-                    </div>
-                    <div class="grid-item" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-heart icon" aria-hidden="true"></i> <h3>Destaque e Conexão</h3>
-                        <p>Você pode ser apresentado nos "Currículos Cristãos" do nosso Instagram e participar de chamadas com outros solteiros compatíveis.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section id="testemunhos">
-            <div class="container">
-                <h2 data-aos="fade-up">Histórias que Edificam</h2>
-                
+            <div class="container" data-aos="fade-up">
+                <h2>Histórias que Edificam</h2>
                 <div class="testemunho-card" data-aos="fade-up" data-aos-delay="200">
                     <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto do casal João e Ana">
-                    <blockquote>"Encontrei na comunidade uma mulher com os mesmos princípios e o mesmo amor por Deus. Oramos juntos, buscamos a mesma direção e hoje estamos construindo nossa história para a glória dEle."</blockquote>
+                    <blockquote>"Encontrei na comunidade uma mulher com os mesmos princípios e o mesmo amor por Deus. Hoje estamos construindo nossa história para a glória dEle."</blockquote>
                     <p class="autor">João & Ana - Noivos</p>
                 </div>
+            </div>
+        </section>
 
-                <div class="testemunho-card" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto do casal Lucas e Beatriz">
-                    <blockquote>"Eu estava cansada de superficialidade. Aqui, encontrei um homem de caráter, que não teve medo de ser vulnerável e falar sobre fé. Foi a resposta das minhas orações."</blockquote>
-                    <p class="autor">Lucas & Beatriz - Casados</p>
+        <section id="recursos">
+            <div class="container" data-aos="fade-up">
+                <h2>Recursos Recomendados</h2>
+                <p>Materiais que podem te ajudar em sua caminhada de preparação.</p>
+                <div class="recursos-grid">
+                    <div class="recurso-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="recurso-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <h3>As 5 Linguagens do Amor</h3>
+                        <p>Um clássico de Gary Chapman para entender como expressamos e recebemos amor.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Ver na Amazon</a>
+                    </div>
+                    <div class="recurso-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="recurso-icon"><i class="fa-solid fa-podcast"></i></div>
+                        <h3>Podcast Irmãos.com</h3>
+                        <p>Conversas relevantes sobre fé, cultura e vida cristã no mundo contemporâneo.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Ouvir no Spotify</a>
+                    </div>
+                    <div class="recurso-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="recurso-icon"><i class="fa-brands fa-youtube"></i></div>
+                        <h3>Canal Dois Dedos de Teologia</h3>
+                        <p>Vídeos que respondem dúvidas teológicas de forma clara, direta e com bom humor.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Assistir no YouTube</a>
+                    </div>
                 </div>
+            </div>
+        </section>
 
+        <section id="faq">
+            <div class="container" data-aos="fade-up">
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary>Existe alguma taxa para participar?</summary>
+                        <div class="faq-content"><p>Atualmente, a participação na comunidade é gratuita. Nosso foco é conectar pessoas com o mesmo propósito. Contudo, doações voluntárias para a manutenção do projeto são bem-vindas.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Como minha privacidade e meus dados são protegidos?</summary>
+                        <div class="faq-content"><p>Sua privacidade é nossa prioridade. Suas informações de contato (WhatsApp, Instagram) só são compartilhadas com uma pessoa específica quando há interesse mútuo e com a sua autorização prévia. O perfil apresentado no Instagram é genérico e também só é postado com seu consentimento.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>A comunidade é ligada a alguma igreja ou denominação?</summary>
+                        <div class="faq-content"><p>Não. Somos um ministério interdenominacional. Acolhemos cristãos evangélicos de diversas denominações que creem na Bíblia como a Palavra de Deus e em Jesus Cristo como único e suficiente Salvador.</p></div>
+                    </details>
+                </div>
             </div>
         </section>
 
         <section id="entrevista">
-            <div class="container">
-                <h2 data-aos="fade-up">Preencha com Verdade</h2>
-                <form id="interview-form" action="https://formspree.io/f/mdkddzdo" method="POST" data-aos="fade-up" data-aos-delay="200">
-                    <input type="hidden" name="_next" value="URL_DA_SUA_PAGINA_DE_AGRADECIMENTO_SE_TIVER_UMA">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo:</label>
-                        <input type="text" id="nome" name="nome_completo" required placeholder="Seu nome completo">
-                    </div>
-                    <div class="form-group">
-                        <label for="idade">Idade:</label>
-                        <input type="number" id="idade" name="idade" min="18" max="99" required placeholder="Ex: 25">
-                    </div>
-                    <div class="form-group">
-                        <label for="cidade_estado">Cidade/Estado:</label>
-                        <input type="text" id="cidade_estado" name="cidade_estado" required placeholder="Ex: João Pessoa/PB">
-                    </div>
-                    <div class="form-group">
-                        <label>Sexo:</label>
-                        <div class="radio-group">
-                            <label for="masculino"><input type="radio" id="masculino" name="sexo" value="Masculino" required> Masculino</label>
-                            <label for="feminino"><input type="radio" id="feminino" name="sexo" value="Feminino"> Feminino</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="igreja">Você é membro ativo de alguma igreja? Qual?</label>
-                        <input type="text" id="igreja" name="igreja" placeholder="Ex: Igreja Batista Central, 3 anos de membro" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="tempo_caminhada">Há quanto tempo você caminha com Cristo?</label>
-                        <select id="tempo_caminhada" name="tempo_caminhada_cristo" required>
-                            <option value="">Selecione</option>
-                            <option value="Menos de 1 ano">Menos de 1 ano</option>
-                            <option value="1-3 anos">1-3 anos</option>
-                            <option value="3-5 anos">3-5 anos</option>
-                            <option value="Mais de 5 anos">Mais de 5 anos</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="motivacao">Qual a sua principal motivação para buscar um relacionamento agora?</label>
-                        <textarea id="motivacao" name="motivacao_relacionamento" placeholder="Ex: Busco alguém para edificar uma família cristã..." required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="instagram">Instagram Pessoal (com @):</label>
-                        <input type="text" id="instagram" name="instagram_pessoal" placeholder="@seuuserdoinsta" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="whatsapp">WhatsApp (com DDD):</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(XX) XXXXX-XXXX" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="link_foto">Link de uma Foto Atual:</label>
-                        <input type="url" id="link_foto" name="link_foto_atual" placeholder="https://linkdasuafoto.com/imagem.jpg" required>
-                    </div>
-                    <div class="form-message-error"></div>
-                    <div class="disclaimer">
-                        <p>Esta não é uma comunidade qualquer. É um lugar de propósito divino, construído sobre verdade e comprometimento. Quem mente para entrar, não merece permanecer.</p>
-                    </div>
-                    <button type="submit" id="submit-button" class="btn btn-secondary">
-                        <span class="btn-text">🚀 Enviar Minha Entrevista e Iniciar a Jornada</span>
-                        <span class="btn-spinner"></span>
-                    </button>
+            <div class="container" data-aos="fade-up">
+                <h2>Pronto para Começar?</h2>
+                <p>Complete sua entrevista com sinceridade. Lembre-se, o primeiro passo para construir algo verdadeiro é ser verdadeiro.</p>
+                <form id="msform" action="https://formspree.io/f/mdkddzdo" method="POST">
+                    <input type="hidden" name="_next" value="">
+                    <ul id="progressbar">
+                        <li class="active">Dados Pessoais</li>
+                        <li>Caminhada Cristã</li>
+                        <li>Contato</li>
+                    </ul>
+                    <fieldset class="form-step active">
+                        <h3>Passo 1: Quem é você?</h3>
+                        <div class="form-group"><label for="nome">Nome Completo:</label><input type="text" id="nome" name="nome_completo" required placeholder="Seu nome completo"></div>
+                        <div class="form-group"><label for="idade">Idade:</label><input type="number" id="idade" name="idade" min="18" max="99" required placeholder="Ex: 25"></div>
+                        <div class="form-group"><label for="cidade_estado">Cidade/Estado:</label><input type="text" id="cidade_estado" name="cidade_estado" required placeholder="Ex: João Pessoa/PB"></div>
+                        <div class="form-group"><label>Sexo:</label><div class="radio-group"><label><input type="radio" name="sexo" value="Masculino" required> Masculino</label><label><input type="radio" name="sexo" value="Feminino"> Feminino</label></div></div>
+                        <div class="form-navigation"><button type="button" class="btn next">Próximo</button></div>
+                    </fieldset>
+                    <fieldset class="form-step">
+                        <h3>Passo 2: Sua Vida com Deus</h3>
+                        <div class="form-group"><label for="igreja">Você é membro ativo de alguma igreja? Qual?</label><input type="text" id="igreja" name="igreja" placeholder="Ex: Igreja Batista Central, 3 anos" required></div>
+                        <div class="form-group"><label for="tempo_caminhada">Há quanto tempo você caminha com Cristo?</label><select id="tempo_caminhada" name="tempo_caminhada_cristo" required><option value="">Selecione</option><option value="Menos de 1 ano">Menos de 1 ano</option><option value="1-3 anos">1-3 anos</option><option value="3-5 anos">3-5 anos</option><option value="Mais de 5 anos">Mais de 5 anos</option></select></div>
+                        <div class="form-group"><label for="motivacao">Qual sua principal motivação para buscar um relacionamento?</label><textarea id="motivacao" name="motivacao_relacionamento" placeholder="Ex: Busco alguém para edificar uma família cristã..." required></textarea></div>
+                        <div class="form-navigation"><button type="button" class="btn prev">Anterior</button><button type="button" class="btn next">Próximo</button></div>
+                    </fieldset>
+                    <fieldset class="form-step">
+                        <h3>Passo 3: Como te encontramos?</h3>
+                        <p style="text-align:center; font-size:0.9em; margin-bottom:20px;">Estas informações são confidenciais e usadas apenas para contato e verificação.</p>
+                        <div class="form-group"><label for="instagram">Instagram Pessoal (com @):</label><input type="text" id="instagram" name="instagram_pessoal" placeholder="@seuuserdoinsta" required></div>
+                        <div class="form-group"><label for="whatsapp">WhatsApp (com DDD):</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="(XX) XXXXX-XXXX" required></div>
+                        <div class="form-group"><label for="link_foto">Link de uma Foto Atual:</label><input type="url" id="link_foto" name="link_foto_atual" placeholder="https://linkdasuafoto.com/imagem.jpg" required></div>
+                        <div class="form-message-error"></div>
+                        <div class="form-navigation"><button type="button" class="btn prev">Anterior</button><button type="submit" class="btn btn-secondary"><span class="btn-text">🚀 Enviar Entrevista</span><span class="spinner"></span></button></div>
+                    </fieldset>
                 </form>
             </div>
         </section>
@@ -231,68 +270,92 @@
         <div class="container">
             <p>&copy; 2025 Crentes Namorando. Todos os direitos reservados.</p>
             <div class="social-icons">
-                <a href="https://www.instagram.com/crentesnamorando" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <a href="https://www.instagram.com/crentesnamorando" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // JAVASCRIPT COMPLETO INSERIDO DIRETAMENTE AQUI
         document.addEventListener('DOMContentLoaded', function() {
-            try {
-                AOS.init({
-                    duration: 800,
-                    once: true,
-                    offset: 50,
+            // Inicializa Animações
+            AOS.init({ duration: 800, once: true, offset: 50 });
+
+            // Lógica do Menu Fixo
+            const nav = document.querySelector('.main-nav');
+            if(nav) {
+                const navHeight = nav.offsetHeight;
+                document.body.style.paddingTop = navHeight + 'px'; // Ajuste inicial
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        nav.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                    } else {
+                        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                    }
                 });
-            } catch (e) {
-                console.error("AOS não pôde ser inicializado.", e);
             }
 
-            const form = document.getElementById('interview-form');
-            const submitButton = document.getElementById('submit-button');
-            const errorMessageContainer = document.querySelector('.form-message-error');
 
+            // Lógica do Formulário Multi-Etapas
+            const form = document.getElementById('msform');
             if (form) {
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
+                let currentStep = 0;
+                const steps = Array.from(form.querySelectorAll('.form-step'));
+                const progressSteps = Array.from(document.querySelectorAll('#progressbar li'));
+                const errorMessageContainer = form.querySelector('.form-message-error');
+
+                const showStep = (stepIndex) => {
+                    steps.forEach((step, index) => {
+                        step.classList.toggle('active', index === stepIndex);
+                    });
+                    progressSteps.forEach((step, index) => {
+                        if (index < stepIndex) {
+                            step.classList.add('active');
+                        } else if (index === stepIndex) {
+                            step.classList.add('active');
+                        } else {
+                            step.classList.remove('active');
+                        }
+                    });
+                };
+                
+                const validateStep = (stepIndex) => {
                     errorMessageContainer.style.display = 'none';
-                    errorMessageContainer.innerHTML = '';
-                    
-                    const instagramInput = document.getElementById('instagram');
-                    const whatsappInput = document.getElementById('whatsapp');
-                    const photoLinkInput = document.getElementById('link_foto');
-                    let errors = [];
+                    const currentFields = steps[stepIndex].querySelectorAll('[required]');
+                    for (const field of currentFields) {
+                        if (!field.value.trim()) {
+                            errorMessageContainer.innerHTML = 'Por favor, preencha todos os campos deste passo.';
+                            errorMessageContainer.style.display = 'block';
+                            return false;
+                        }
+                    }
+                    return true;
+                };
 
-                    if (!instagramInput.value.startsWith('@') || instagramInput.value.length < 3) {
-                        errors.push('O Instagram deve começar com "@" e ter um nome de usuário.');
-                    }
-                    const whatsappRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-                    if (!whatsappRegex.test(whatsappInput.value)) {
-                        errors.push('O formato do WhatsApp deve ser (XX) XXXXX-XXXX.');
-                    }
-                    try {
-                        new URL(photoLinkInput.value);
-                    } catch (_) {
-                        errors.push('O link da foto parece ser uma URL inválida.');
-                    }
-                    if (document.getElementById('nome').value.trim() === '' || document.getElementById('idade').value.trim() === '' || document.getElementById('tempo_caminhada').value === '') {
-                         errors.push('Por favor, preencha todos os campos obrigatórios.');
-                    }
-
-                    if (errors.length > 0) {
-                        errorMessageContainer.innerHTML = errors.join('<br>');
-                        errorMessageContainer.style.display = 'block';
-                        errorMessageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    } else {
-                        submitButton.classList.add('btn--loading');
-                        submitButton.disabled = true;
-                        form.submit();
+                form.addEventListener('click', function(e) {
+                    if (e.target.matches('.next')) {
+                        if (validateStep(currentStep)) {
+                            currentStep++;
+                            showStep(currentStep);
+                        }
+                    } else if (e.target.matches('.prev')) {
+                        currentStep--;
+                        showStep(currentStep);
                     }
                 });
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if(validateStep(currentStep)) {
+                        const submitButton = e.target.querySelector('button[type="submit"]');
+                        submitButton.classList.add('loading');
+                        submitButton.disabled = true;
+                        // Simulação de envio
+                        setTimeout(() => form.submit(), 1000);
+                    }
+                });
+
+                showStep(currentStep);
             }
         });
     </script>
