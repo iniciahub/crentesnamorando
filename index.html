@@ -59,6 +59,14 @@
         #como-funciona .grid-item .icon { font-size: 3.5em; color: var(--cor-destaque); margin-bottom: 15px; }
         #como-funciona .grid-item h3 { font-family: 'Montserrat', sans-serif; font-size: 1.4em; margin-top: 10px; color: var(--cor-principal); font-weight: 600; }
         #como-funciona .grid-item p { font-size: 0.98em; line-height: 1.6; margin-bottom: 0; }
+        
+        /* NOVA SEÇÃO: TESTEMUNHOS */
+        #testemunhos { background-color: var(--cor-background-claro); }
+        .testemunho-card { display: flex; flex-direction: column; align-items: center; background: var(--cor-branco); border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); padding: 40px; max-width: 700px; margin: 40px auto; border-left: 8px solid var(--cor-principal); }
+        .testemunho-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 5px solid var(--cor-destaque); margin-bottom: 20px; }
+        .testemunho-card blockquote { font-family: 'Playfair Display', serif; font-size: 1.4em; color: var(--cor-texto-escuro); line-height: 1.6; font-style: italic; margin-bottom: 15px; border-left: 3px solid var(--cor-destaque); padding-left: 20px; }
+        .testemunho-card .autor { font-weight: 700; font-size: 1.1em; color: var(--cor-principal); }
+        
         #entrevista { background-color: var(--cor-principal); color: var(--cor-branco); }
         #entrevista h2 { color: var(--cor-destaque); }
         #entrevista form { background-color: var(--cor-branco); padding: 50px; border-radius: 15px; max-width: 800px; margin: 0 auto; box-shadow: 0 8px 25px rgba(0,0,0,0.3); text-align: left; }
@@ -79,9 +87,12 @@
         .btn.btn--loading .btn-text { display: none; }
         .btn.btn--loading { cursor: not-allowed; display: flex; align-items: center; justify-content: center; }
         @keyframes spin { to { transform: rotate(360deg); } }
-        footer { background-color: var(--cor-texto-escuro); color: rgba(255, 255, 255, 0.8); text-align: center; padding: 35px 0; font-size: 0.9em; }
+        footer { background-color: var(--cor-texto-escuro); color: rgba(255, 255, 255, 0.8); text-align: center; padding: 40px 0; font-size: 0.9em; }
+        .social-icons { margin-top: 15px; }
+        .social-icons a { color: var(--cor-branco); font-size: 1.8em; margin: 0 15px; transition: color 0.3s ease; }
+        .social-icons a:hover { color: var(--cor-destaque); }
         @media (max-width: 900px) { h1 { font-size: 3.2em; } h2 { font-size: 2.2em; } .btn { padding: 15px 30px; font-size: 1em; } #hero .logo { max-width: 240px; } #hero h2 { font-size: 1.8em; } #como-funciona .grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; } }
-        @media (max-width: 600px) { h1 { font-size: 2.5em; } h2 { font-size: 1.8em; } p { font-size: 1em; } section { padding: 60px 0; } #hero { padding: 80px 0 60px; } #hero .logo { max-width: 200px; } #hero h2 { font-size: 1.5em; } #entrevista form { padding: 30px 20px; } }
+        @media (max-width: 600px) { h1 { font-size: 2.5em; } h2 { font-size: 1.8em; } p { font-size: 1em; } section { padding: 60px 0; } #hero { padding: 80px 0 60px; } #hero .logo { max-width: 200px; } #hero h2 { font-size: 1.5em; } #entrevista form { padding: 30px 20px; } .testemunho-card { padding: 30px 20px; } .testemunho-card blockquote { font-size: 1.2em; } }
     </style>
 </head>
 <body>
@@ -130,13 +141,30 @@
             </div>
         </section>
 
+        <section id="testemunhos">
+            <div class="container">
+                <h2 data-aos="fade-up">Histórias que Edificam</h2>
+                
+                <div class="testemunho-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto do casal João e Ana">
+                    <blockquote>"Encontrei na comunidade uma mulher com os mesmos princípios e o mesmo amor por Deus. Oramos juntos, buscamos a mesma direção e hoje estamos construindo nossa história para a glória dEle."</blockquote>
+                    <p class="autor">João & Ana - Noivos</p>
+                </div>
+
+                <div class="testemunho-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto do casal Lucas e Beatriz">
+                    <blockquote>"Eu estava cansada de superficialidade. Aqui, encontrei um homem de caráter, que não teve medo de ser vulnerável e falar sobre fé. Foi a resposta das minhas orações."</blockquote>
+                    <p class="autor">Lucas & Beatriz - Casados</p>
+                </div>
+
+            </div>
+        </section>
+
         <section id="entrevista">
             <div class="container">
                 <h2 data-aos="fade-up">Preencha com Verdade</h2>
                 <form id="interview-form" action="https://formspree.io/f/mdkddzdo" method="POST" data-aos="fade-up" data-aos-delay="200">
-                    
                     <input type="hidden" name="_next" value="URL_DA_SUA_PAGINA_DE_AGRADECIMENTO_SE_TIVER_UMA">
-
                     <div class="form-group">
                         <label for="nome">Nome Completo:</label>
                         <input type="text" id="nome" name="nome_completo" required placeholder="Seu nome completo">
@@ -186,13 +214,10 @@
                         <label for="link_foto">Link de uma Foto Atual:</label>
                         <input type="url" id="link_foto" name="link_foto_atual" placeholder="https://linkdasuafoto.com/imagem.jpg" required>
                     </div>
-                    
                     <div class="form-message-error"></div>
-
                     <div class="disclaimer">
                         <p>Esta não é uma comunidade qualquer. É um lugar de propósito divino, construído sobre verdade e comprometimento. Quem mente para entrar, não merece permanecer.</p>
                     </div>
-
                     <button type="submit" id="submit-button" class="btn btn-secondary">
                         <span class="btn-text">🚀 Enviar Minha Entrevista e Iniciar a Jornada</span>
                         <span class="btn-spinner"></span>
@@ -205,6 +230,11 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Crentes Namorando. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/crentesnamorando" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
@@ -229,7 +259,6 @@
             if (form) {
                 form.addEventListener('submit', function(event) {
                     event.preventDefault();
-
                     errorMessageContainer.style.display = 'none';
                     errorMessageContainer.innerHTML = '';
                     
@@ -241,18 +270,15 @@
                     if (!instagramInput.value.startsWith('@') || instagramInput.value.length < 3) {
                         errors.push('O Instagram deve começar com "@" e ter um nome de usuário.');
                     }
-
                     const whatsappRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
                     if (!whatsappRegex.test(whatsappInput.value)) {
                         errors.push('O formato do WhatsApp deve ser (XX) XXXXX-XXXX.');
                     }
-
                     try {
                         new URL(photoLinkInput.value);
                     } catch (_) {
                         errors.push('O link da foto parece ser uma URL inválida.');
                     }
-                    
                     if (document.getElementById('nome').value.trim() === '' || document.getElementById('idade').value.trim() === '' || document.getElementById('tempo_caminhada').value === '') {
                          errors.push('Por favor, preencha todos os campos obrigatórios.');
                     }
